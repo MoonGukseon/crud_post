@@ -1,0 +1,29 @@
+<head>
+</head>
+<body>
+    <div class="container">
+        <h2 style="font-family: 'Pacifico', cursive;">Dashboad</h2>
+        <div class="col s12 m12">
+            <table class="highlight"> 
+                <thead>
+                    <tr>
+                        <th width="80%">Title</th>
+                        <th>Editor</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <% @post_list.each do |e| %>
+                    <tr>
+                        <td><a href="/show/<%= e.id %>" style="text-decoration: none; color: black"><%= e.title %></a></td>
+                        <td><%= e.editor %></td>
+                    </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+        <div class="col m2 right-align">
+            <a class="waves-effect waves-light btn" href = "/new">Write</a>
+        </div>
+    </div>
+</body>
